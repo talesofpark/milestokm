@@ -7,13 +7,14 @@ def convert():
     try:
         mile_input= float(entry_int.get())
         km_output = mile_input * 1.61
-        output_string.set(km_output)
+        output_string.set(f"{km_output}KM")
         print("clicked")
     except ValueError:
         output_string.set("Enter a number")
 
 #window
-window = tk.Tk()
+#window = tk.Tk()
+window = ttk.Window(themename="journal")
 window.title("Demo")
 window.geometry("300x220")  # FIX: was 300x150, output was getting pushed off screen
 
